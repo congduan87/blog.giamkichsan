@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "jquery@latest",
+      "destination": "wwwroot/plugins/jquery/",
+      "files": [
+        "dist/jquery.js",
+        "dist/jquery.min.js"
+      ]
+    },
+    {
+      "library": "bootstrap@latest",
+      "destination": "wwwroot/plugins/bootstrap/"
+    }
+  ]
+}
