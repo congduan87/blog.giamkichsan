@@ -1,63 +1,116 @@
 ﻿@page
 @model blog.giamkichsan.Pages.Partial.DialogFileModel
-<div class="dialogfile">
-    <section class="dialogfile-title">
-        <ul>
-            <li>
-                <ul>
-                    <li>D:</li>
-                    <li>\CongDuan</li>
-                    <li>\Setup</li>
-                    <li>\Flutter</li>
-                </ul>
-            </li>
-            <li>
-                <input type="text" placeholder="search" />
-            </li>
-        </ul>
-    </section>
-    <section class="dialogfile-content">
-       <nav>
-           <ul>
-               <li>Sach Tieng Anh
-                   <ul>
-                       <li>Lop 6</li>
-                       <li>Lop 7</li>
-                       <li>Lop 8</li>
-                   </ul>
-               </li>
-               <li>Sach Toan</li>
-               <li>Sach Van</li>
-           </ul>
-       </nav>
-       <ul>
-           <li>Thu muc</li>
-           <li>video.mp4</li>
-           <li>video2.mp4</li>
-           <li>video3.mp4</li>
-       </ul>
-        <nav>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
 
+        .dialogfile {
+            width: 800px;
+            margin: 10px auto;
+            border: 1px dashed #f3f3f3;
+            background-color: #F7F7F7;
+        }
+
+            .dialogfile ul {
+                list-style: none;
+            }
+
+                .dialogfile ul:after {
+                    content: "";
+                    clear: both;
+                    display: block;
+                    height: 0;
+                    line-height: 0;
+                    visibility: hidden;
+                }
+
+        .dialogfile-title {
+            height: 50px;
+            padding: 5px 10px;
+        }
+
+        li.dialogfile-path, li.dialogfile-search, li.dialogfile-path > ul > li {
+            float: left;
+        }
+
+        li.dialogfile-search {
+            width: 69%;
+        }
+        li.dialogfile-path > ul {
+            border: 1px solid #f3f3f3;
+        }
+
+        li.dialogfile-search {
+            width: 29%;
+        }
+            li.dialogfile-search > ul {
+                border: 1px solid #f3f3f3;
+            }
+
+
+
+    </style>
+    <div class="dialogfile">
+        <nav class="dialogfile-title">
+            <ul>
+                <li class="dialogfile-path">
+                    <ul>
+                        <li>D:</li>
+                        <li>\CongDuan</li>
+                        <li>\Setup</li>
+                        <li>\Flutter</li>
+                    </ul>
+                </li>
+                <li class="dialogfile-search">
+                    <input type="text" placeholder="search" />
+                </li>
+            </ul>
         </nav>
-    </section>
-    <section class="dialogfile-footer">
-        <ul>
-            <li>
-                <p>File name: <input type="text" value="View component trong ASP.NET Core _ Tự học ICT" /></p>
-            </li>
-            <li>
-                <p>Type of File: <input type="text" value=".img" /></p>
-            </li>
-            <li>
+        <section class="dialogfile-content">
+            <nav>
                 <ul>
                     <li>
-                        <button class="fa fa-save" title="Choose">Choose</button>
+                        Sach Tieng Anh
+                        <ul>
+                            <li>Lop 6</li>
+                            <li>Lop 7</li>
+                            <li>Lop 8</li>
+                        </ul>
                     </li>
-                    <li>
-                        <button class="fa fa-delicious" title="Cancel">Cancel</button>
-                    </li>
+                    <li>Sach Toan</li>
+                    <li>Sach Van</li>
                 </ul>
-            </li>
-        </ul>
-    </section>
-</div>
+            </nav>
+            <ul>
+                <li>Thu muc</li>
+                <li>video.mp4</li>
+                <li>video2.mp4</li>
+                <li>video3.mp4</li>
+            </ul>
+            <nav>
+
+            </nav>
+        </section>
+        <section class="dialogfile-footer">
+            <ul>
+                <li>
+                    <p>File name: <input type="text" value="View component trong ASP.NET Core _ Tự học ICT" /></p>
+                </li>
+                <li>
+                    <p>Type of File: <input type="text" value=".img" /></p>
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <button class="fa fa-save" title="Choose">Choose</button>
+                        </li>
+                        <li>
+                            <button class="fa fa-delicious" title="Cancel">Cancel</button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>

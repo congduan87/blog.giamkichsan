@@ -1,3 +1,4 @@
+using blog.giamkichsan.Api;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,7 @@ namespace blog.giamkichsan
 		{
 			services.AddRazorPages();
 			services.AddControllers();
+			services.AddDbContext<BlogsDbContext>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,7 +41,7 @@ namespace blog.giamkichsan
 			var options = new DefaultFilesOptions();
 			options.DefaultFileNames.Add("index.html");
 			app.UseDefaultFiles(options);
-
+			app.UseStaticFiles();
 			app.UseHttpsRedirection();
 
 			app.UseRouting();
